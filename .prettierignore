@@ -1,8 +1,6 @@
 ### Angular template
 ## Angular ##
 # compiled output
-dist/
-tmp/
 app/**/*.js
 app/**/*.js.map
 
@@ -20,7 +18,6 @@ coverage/
 libpeerconnection.log/
 npm-debug.log
 testem.log
-typings/
 .angular/
 
 # e2e
