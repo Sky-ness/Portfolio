@@ -1,1 +1,5 @@
-<p>projects works!</p>
+<ul class=" flex flex-row justify-center items-center list-none gap-6">
+  <li *ngFor="let project of projects" class="basis-1/4">
+    <app-project-card [project]="project"></app-project-card>
+  </li>
+</ul>
