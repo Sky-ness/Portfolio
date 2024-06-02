@@ -13,7 +13,9 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { InputTextareaModule } from 'primeng/inputtextarea'
 import { ProjectsComponent } from './features/projects/projects.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { CheckboxModule } from 'primeng/checkbox'
+import { CheckboxModule } from 'primeng/checkbox';
+import { HomeComponent } from './features/home/home.component';
+import { HobbiesComponent } from './features/hobbies/hobbies.component'
 
 @NgModule({
     declarations: [
@@ -23,6 +25,8 @@ import { CheckboxModule } from 'primeng/checkbox'
         ContactComponent,
         PageNotFoundComponent,
         ProjectsComponent,
+        HomeComponent,
+        HobbiesComponent,
     ],
     imports: [
         BrowserModule,

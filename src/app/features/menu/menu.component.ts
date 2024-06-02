@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { MenuItem } from 'primeng/api'
 import { Router } from '@angular/router'
-import { faGit } from '@fortawesome/free-brands-svg-icons'
+import { faGit, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faRunning } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
@@ -17,14 +17,24 @@ export class MenuComponent implements OnInit {
     ngOnInit() {
         this.items = [
             {
+                label: 'Acceuil',
+                icon: faGithub.iconName,
+                route: '/home',
+            },
+            {
                 label: 'Mes projets',
                 icon: faGit.iconName,
-                route: '/project',
+                route: '/projects',
             },
             {
                 label: 'Mes loisirs',
                 icon: faRunning.iconName,
-                route: '/loisirs',
+                route: '/hobbies',
+            },
+            {
+                label: 'Mes jobs',
+                icon: faGithub.iconName,
+                route: '/career',
             },
             {
                 label: 'Contact',
