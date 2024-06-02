@@ -37,7 +37,16 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/primeng/resources/themes/lara-dark-green/theme.css",
+              {
+                "input": "src/assets/themes/lara-light-green.css",
+                "bundleName": "lara-light-green",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/lara-dark-green.css",
+                "bundleName": "lara-dark-green",
+                "inject": false
+              },
               "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
@@ -48,7 +57,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -93,7 +102,19 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"],
+            "styles": [
+              "src/styles.css",
+              {
+                "input": "src/assets/themes/lara-light-green.css",
+                "bundleName": "lara-light-green",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/lara-dark-green.css",
+                "bundleName": "lara-dark-green",
+                "inject": false
+              }
+            ],
             "scripts": []
           }
         },

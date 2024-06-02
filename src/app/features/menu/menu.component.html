@@ -2,10 +2,17 @@
   <ng-template pTemplate="item" let-item>
     <ng-container *ngIf="item.route">
       <a [routerLink]="item.route" class="p-menuitem-link">
-        <fa-icon [icon]="item.icon"></fa-icon>
+        <fa-icon [icon]="['fas',item.icon]"></fa-icon>
         <span class="ml-2">{{ item.label }}</span>
       </a>
     </ng-container>
   </ng-template>
+  <div class="flex flex-row items-center gap-2">
+    <fa-icon [icon]="switchIconTheme()"/>
+    <p-inputSwitch [(ngModel)]="lightMode" (onChange)="switchTheme()"/>
+    <p>{{lightMode?"Mode clair":"Mode sombre"}}</p>
+  </div>
 </p-menubar>
+
+
 

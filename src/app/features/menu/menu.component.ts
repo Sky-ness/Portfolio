@@ -1,8 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import { MenuItem } from 'primeng/api'
-import { Router } from '@angular/router'
-import { faGit, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faRunning } from '@fortawesome/free-solid-svg-icons'
+import {
+    faCode,
+    faEnvelope,
+    faHome,
+    faLightbulb,
+    faMoon,
+    faRunning,
+    faSuitcase,
+} from '@fortawesome/free-solid-svg-icons'
+import { ThemeService } from '../../services/themes.service'
 
 @Component({
     selector: 'app-menu',
@@ -11,19 +18,21 @@ import { faEnvelope, faRunning } from '@fortawesome/free-solid-svg-icons'
 })
 export class MenuComponent implements OnInit {
     items: MenuItem[] | undefined
-
-    constructor(private router: Router) {}
+    protected lightMode: boolean = false
+    protected light = faLightbulb
+    protected moon = faMoon
+    constructor(protected themeService: ThemeService) {}
 
     ngOnInit() {
         this.items = [
             {
                 label: 'Acceuil',
-                icon: faGithub.iconName,
+                icon: faHome.iconName,
                 route: '/home',
             },
             {
                 label: 'Mes projets',
-                icon: faGit.iconName,
+                icon: faCode.iconName,
                 route: '/projects',
             },
             {
@@ -33,7 +42,7 @@ export class MenuComponent implements OnInit {
             },
             {
                 label: 'Mes jobs',
-                icon: faGithub.iconName,
+                icon: faSuitcase.iconName,
                 route: '/career',
             },
             {
@@ -42,5 +51,12 @@ export class MenuComponent implements OnInit {
                 route: '/contact',
             },
         ]
+    }
+
+    switchTheme() {
+        this.themeService.switchTheme(this.lightMode)
+    }
+    switchIconTheme() {
+        return this.lightMode ? this.light : this.moon
     }
 }

@@ -9,13 +9,24 @@ import { ContactComponent } from './features/contact/contact.component'
 import { MenubarModule } from 'primeng/menubar'
 import { PageNotFoundComponent } from './features/page-not-found/page-not-found.component'
 import { ButtonModule } from 'primeng/button'
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { InputTextareaModule } from 'primeng/inputtextarea'
 import { ProjectsComponent } from './features/projects/projects.component'
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { CheckboxModule } from 'primeng/checkbox';
-import { HomeComponent } from './features/home/home.component';
+import {
+    FaIconLibrary,
+    FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome'
+import { CheckboxModule } from 'primeng/checkbox'
+import { HomeComponent } from './features/home/home.component'
 import { HobbiesComponent } from './features/hobbies/hobbies.component'
+import { CardModule } from 'primeng/card'
+import { AvatarModule } from 'primeng/avatar'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { InputSwitchModule } from 'primeng/inputswitch'
+import { provideAnimations } from '@angular/platform-browser/animations'
+import { AccordionModule } from 'primeng/accordion'
+import { ProjectCardComponent } from './features/projects/project-card/project-card.component'
+import { NgOptimizedImage } from '@angular/common'
 
 @NgModule({
     declarations: [
@@ -27,6 +38,7 @@ import { HobbiesComponent } from './features/hobbies/hobbies.component'
         ProjectsComponent,
         HomeComponent,
         HobbiesComponent,
+        ProjectCardComponent,
     ],
     imports: [
         BrowserModule,
@@ -37,8 +49,19 @@ import { HobbiesComponent } from './features/hobbies/hobbies.component'
         InputTextareaModule,
         FontAwesomeModule,
         CheckboxModule,
+        CardModule,
+        AvatarModule,
+        InputSwitchModule,
+        FormsModule,
+        AccordionModule,
+        NgOptimizedImage,
     ],
-    providers: [],
+    providers: [provideAnimations()],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+    constructor(library: FaIconLibrary) {
+        // Add multiple icons to the library
+        library.addIconPacks(fas)
+    }
+}
