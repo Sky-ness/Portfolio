@@ -5,11 +5,11 @@ import { faGit } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faRunning } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
-    selector: 'app-top-bar',
-    templateUrl: './top-bar.component.html',
-    styleUrl: './top-bar.component.css',
+    selector: 'app-menu',
+    templateUrl: './menu.component.html',
+    styleUrl: './menu.component.css',
 })
-export class TopBarComponent implements OnInit {
+export class MenuComponent implements OnInit {
     items: MenuItem[] | undefined
 
     constructor(private router: Router) {}
