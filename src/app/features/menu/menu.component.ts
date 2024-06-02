@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
             {
                 label: 'Acceuil',
                 icon: faHome.iconName,
-                route: '/home',
+                route: '/',
             },
             {
                 label: 'Mes projets',

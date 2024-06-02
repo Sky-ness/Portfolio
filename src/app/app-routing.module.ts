@@ -9,7 +9,7 @@ import { HobbiesComponent } from './features/hobbies/hobbies.component'
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: HomeComponent,
     },
     {
