@@ -35,13 +35,13 @@ export class ProjectsComponent implements OnInit {
                 link: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg',
             },
             {
-                title: 'Mini Projet Agile',
+                title: 'Agar.io like',
                 date: '09/2022',
                 text:
                     'En début de semestre de la 2ème année de BUT informatique nous avons développé un jeu rétro ' +
                     'avec la méthode agile en java en utilisant des sprint de 4 heures et en faisant des démonstrations a la fin de ceux ci  .',
                 pictures:
-                    'https://primefaces.org/cdn/primeng/images/card-ng.jpg',
+                    'assets/images/agario.webp',
                 link: 'https://primefaces.org/cdn/primeng/images/card-ng.jpg',
             },
         ]
