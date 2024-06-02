@@ -1,0 +1,13 @@
+<p-card header="{{project.title}}" subheader="{{project.date}}" >
+  <ng-template pTemplate="header">
+    <img alt="Card" class="rounded-lg" src="{{project.pictures}}" />
+  </ng-template>
+  <p>
+    {{project.text}}
+  </p>
+  <ng-template pTemplate="footer">
+    <div class="flex justify-center mt-1">
+      <a class="p-button font-bold" href="{{project.link}}">Lien vers le Github</a>
+    </div>
+  </ng-template>
+</p-card>
