@@ -1,7 +1,37 @@
-<p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
-          styleClass="mr-2"
-          size="xlarge"
-          shape="circle" />
-<p-card class="w-full" header="Présentation" >
-
+<p-card header="Présentation">
+  <ng-template pTemplate="header">
+    <p-avatar label="A"
+              styleClass="mr-2"
+              size="xlarge"
+              shape="circle" />
+  </ng-template>
+  Actuellement à la recherche d'un emploi de developpeur fullstack
+  suite a l'obtention de mon bachelor en informatique.
+  J'ai une bonne maitrise de Angular et Java que j'ai utilisé pendant mon alternance.
+  <ng-template pTemplate="footer">
+    <a class="p-button" href="assets/files/CV.pdf" download="CV.pdf">Voir Mon CV</a>
+  </ng-template>
 </p-card>
+
+  <div class="flex flex-row justify-between mx-4 my-6 text-8xl text-green-300">
+    <div class="flex flex-col">
+      <fa-icon [icon]="faAngular"/>
+      <p-progressBar [value]="90" />
+    </div>
+    <div class="flex flex-col">
+      <fa-icon [icon]="faJava"/>
+      <p-progressBar [value]="80" />
+    </div>
+    <div class="flex flex-col">
+      <fa-icon [icon]="faNode"/>
+      <p-progressBar [value]="80" />
+    </div>
+    <div class="flex flex-col">
+      <fa-icon [icon]="faGit"/>
+      <p-progressBar [value]="70" />
+    </div>
+    <div class="flex flex-row">
+      <fa-icon [icon]="faLinux"/>
+      <p-progressBar [value]="50"/>
+    </div>
+  </div>
