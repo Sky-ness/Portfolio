@@ -27,6 +27,8 @@ import { provideAnimations } from '@angular/platform-browser/animations'
 import { AccordionModule } from 'primeng/accordion'
 import { ProjectCardComponent } from './features/projects/project-card/project-card.component'
 import { NgOptimizedImage } from '@angular/common'
+import { ProgressBarModule } from 'primeng/progressbar'
+import { SplitterModule } from 'primeng/splitter'
 
 @NgModule({
     declarations: [
@@ -40,22 +42,24 @@ import { NgOptimizedImage } from '@angular/common'
         HobbiesComponent,
         ProjectCardComponent,
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MenubarModule,
-        ButtonModule,
-        ReactiveFormsModule,
-        InputTextareaModule,
-        FontAwesomeModule,
-        CheckboxModule,
-        CardModule,
-        AvatarModule,
-        InputSwitchModule,
-        FormsModule,
-        AccordionModule,
-        NgOptimizedImage,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MenubarModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    FontAwesomeModule,
+    CheckboxModule,
+    CardModule,
+    AvatarModule,
+    InputSwitchModule,
+    FormsModule,
+    AccordionModule,
+    NgOptimizedImage,
+    ProgressBarModule,
+    SplitterModule,
+  ],
     providers: [provideAnimations()],
     bootstrap: [AppComponent],
 })
