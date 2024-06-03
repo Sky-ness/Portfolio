@@ -34,6 +34,7 @@ import { GalleriaModule } from 'primeng/galleria'
 import { CareerComponent } from './features/career/career.component'
 import { StepperModule } from 'primeng/stepper'
 import { PanelModule } from 'primeng/panel'
+import { FieldsetModule } from 'primeng/fieldset'
 
 @NgModule({
     declarations: [
@@ -69,6 +70,7 @@ import { PanelModule } from 'primeng/panel'
     GalleriaModule,
     StepperModule,
     PanelModule,
+    FieldsetModule,
   ],
     providers: [provideAnimations()],
     bootstrap: [AppComponent],
