@@ -56,8 +56,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "2MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "4MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -119,9 +119,15 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+        "builder": "angular-cli-ghpages:deploy",
+        "options": {
+          "buildTarget": "Portfolio:build:production"
+        }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "acae46e6-0c9b-460b-9291-21a840edf611"
   }
 }
