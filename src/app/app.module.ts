@@ -29,6 +29,11 @@ import { ProjectCardComponent } from './features/projects/project-card/project-c
 import { NgOptimizedImage } from '@angular/common'
 import { ProgressBarModule } from 'primeng/progressbar'
 import { SplitterModule } from 'primeng/splitter'
+import { CarouselModule } from 'primeng/carousel'
+import { GalleriaModule } from 'primeng/galleria'
+import { CareerComponent } from './features/career/career.component'
+import { StepperModule } from 'primeng/stepper'
+import { PanelModule } from 'primeng/panel'
 
 @NgModule({
     declarations: [
@@ -37,6 +42,7 @@ import { SplitterModule } from 'primeng/splitter'
         MenuComponent,
         ContactComponent,
         PageNotFoundComponent,
+        CareerComponent,
         ProjectsComponent,
         HomeComponent,
         HobbiesComponent,
@@ -59,6 +65,10 @@ import { SplitterModule } from 'primeng/splitter'
     NgOptimizedImage,
     ProgressBarModule,
     SplitterModule,
+    CarouselModule,
+    GalleriaModule,
+    StepperModule,
+    PanelModule,
   ],
     providers: [provideAnimations()],
     bootstrap: [AppComponent],

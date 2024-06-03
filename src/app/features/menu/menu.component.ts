@@ -36,12 +36,12 @@ export class MenuComponent implements OnInit {
                 route: '/projects',
             },
             {
-                label: 'Mes loisirs',
+                label: 'loisirs',
                 icon: faRunning.iconName,
                 route: '/hobbies',
             },
             {
-                label: 'Mes jobs',
+                label: 'expériences professionnelles',
                 icon: faSuitcase.iconName,
                 route: '/career',
             },

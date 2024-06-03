@@ -1,19 +1,25 @@
-<p-card header="Présentation">
+<p-panel styleClass="my-5">
   <ng-template pTemplate="header">
-    <p-avatar label="A"
-              styleClass="mr-2"
-              size="xlarge"
-              shape="circle" />
+    <div class="flex items-center gap-2">
+      <p-avatar
+        label="A"
+        size="large"
+        shape="circle" />
+        <span class="font-bold">
+                Antonin Duvauchel
+            </span>
+    </div>
   </ng-template>
-  Actuellement à la recherche d'un emploi de developpeur fullstack
-  suite a l'obtention de mon bachelor en informatique.
-  J'ai une bonne maitrise de Angular et Java que j'ai utilisé pendant mon alternance.
   <ng-template pTemplate="footer">
     <a class="p-button" href="assets/files/CV.pdf" download="CV.pdf">Voir Mon CV</a>
   </ng-template>
-</p-card>
+  <p class="m-0">
+    Actuellement à la recherche d'un emploi de developpeur fullstack suite a l'obtention de mon bachelor en informatique.
+    J'ai une bonne maitrise de Angular et Java que j'ai utilisé pendant mon alternance.
+  </p>
+</p-panel>
 
-  <div class="flex flex-row justify-between mx-4 my-6 text-8xl text-green-300">
+  <div class="techno mx-4 my-6">
     <div class="flex flex-col">
       <fa-icon [icon]="faAngular"/>
       <p-progressBar [value]="90" />
@@ -35,3 +41,4 @@
       <p-progressBar [value]="50"/>
     </div>
   </div>
+
