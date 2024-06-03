@@ -1,1 +1,8 @@
 @import "primeng/resources/themes/lara-light-green/theme.css";
+fa-icon{
+  color: black;
+}
+a{
+  text-decoration:none;
+  color:black;
+}
